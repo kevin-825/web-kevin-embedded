@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kevin Embedded | Systems Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background-color: #0f172a; color: #e2e8f0; }
+        .card { background-color: #1e293b; border: 1px solid #334155; padding: 1.5rem; border-radius: 0.75rem; }
+    </style>
+</head>
+<body>
+
+    <main class="max-w-4xl mx-auto py-16 px-6">
+        <!-- Hero -->
+        <section class="text-center mb-16">
+            <h1 id="user-name" class="text-5xl font-bold mb-2 text-blue-400"></h1>
+            <p id="user-title" class="text-xl text-slate-400 mb-6"></p>
+            <a id="resume-btn" href="#" download class="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg font-bold">Download Resume (PDF)</a>
+        </section>
+
+        <!-- Dynamic Sections -->
+        <div class="space-y-12">
+            <section>
+                <h2 class="text-2xl font-bold mb-6 border-l-4 border-blue-500 pl-4">Core Research</h2>
+                <div id="research-list" class="grid md:grid-cols-2 gap-4"></div>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-bold mb-6 border-l-4 border-green-500 pl-4">Projects</h2>
+                <div id="project-list" class="space-y-4"></div>
+            </section>
+        </div>
+    </main>
+
+    <script src="content.js"></script>
+    <script>
+        // Logic to inject data
+        document.getElementById('user-name').innerText = PROFILE_DATA.name;
+        document.getElementById('user-title').innerText = PROFILE_DATA.title;
+        document.getElementById('resume-btn').href = PROFILE_DATA.resumeLink;
+
+        const researchContainer = document.getElementById('research-list');
+        PROFILE_DATA.research.forEach(item => {
+            researchContainer.innerHTML += `
+                <div class="card">
+                    <h3 class="text-blue-400 font-bold mb-1">${item.topic}</h3>
+                    <p class="text-sm text-slate-400">${item.description}</p>
+                </div>`;
+        });
+
+        const projectContainer = document.getElementById('project-list');
+        PROFILE_DATA.projects.forEach(p => {
+            projectContainer.innerHTML += `
+                <div class="card">
+                    <h3 class="text-lg font-bold italic">${p.name}</h3>
+                    <p class="text-slate-400 text-sm mt-1">${p.desc}</p>
+                </div>`;
+        });
+    </script>
+</body>
+</html>
