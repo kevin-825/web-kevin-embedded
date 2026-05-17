@@ -1,81 +1,262 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kevin Embedded | Systems Engineer</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Kevin Aimaier | Senior Embedded Engineer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        body { background-color: #0f172a; color: #e2e8f0; }
-        .card { background-color: #1e293b; border: 1px solid #334155; padding: 1.5rem; border-radius: 0.75rem; }
+        /* Bare-Metal Dark Theme */
+        :root {
+            --bg-color: #0d1117;
+            --text-main: #c9d1d9;
+            --text-muted: #8b949e;
+            --accent: #58a6ff;
+            --card-bg: #161b22;
+            --border: #30363d;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            color: var(--text-muted);
+            font-weight: 400;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #238636;
+            color: #ffffff;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.2s;
+            border: 1px solid rgba(240, 246, 252, 0.1);
+        }
+
+        .btn:hover {
+            background-color: #2ea043;
+        }
+
+        .social-links {
+            margin-top: 30px;
+        }
+
+        .social-links a {
+            color: var(--text-muted);
+            font-size: 1.5rem;
+            margin: 0 15px;
+            transition: color 0.2s;
+        }
+
+        .social-links a:hover {
+            color: var(--accent);
+        }
+
+        section {
+            margin: 50px 0;
+        }
+
+        section h3 {
+            font-size: 1.8rem;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            color: var(--accent);
+        }
+
+        .summary-text {
+            font-size: 1.1rem;
+            color: var(--text-main);
+            text-align: justify;
+        }
+
+        .project-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .project-card h4 {
+            font-size: 1.3rem;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        .project-card h4 a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .project-card h4 a:hover {
+            text-decoration: underline;
+        }
+
+        .tech-stack {
+            margin-top: 15px;
+        }
+
+        .tag {
+            display: inline-block;
+            background-color: rgba(88, 166, 255, 0.1);
+            color: var(--accent);
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            margin-right: 8px;
+            margin-bottom: 8px;
+            border: 1px solid rgba(88, 166, 255, 0.2);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-item {
+            background-color: var(--card-bg);
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+
+        .skill-item strong {
+            display: block;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border);
+            margin-top: 60px;
+        }
     </style>
 </head>
 <body>
 
-    <main class="max-w-4xl mx-auto py-16 px-6">
-        <!-- Hero Section -->
-        <section class="text-center mb-16">
-            <h1 id="user-name" class="text-5xl font-bold mb-2 text-blue-400"></h1>
-            <p id="user-title" class="text-xl text-slate-400 mb-6"></p>
-            <a id="resume-btn" href="#" download class="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg font-bold">Download Resume (PDF)</a>
+    <div class="container">
+        <header>
+            <h1>Kevin Aimaier</h1>
+            <h2>Senior Embedded Software Engineer | BSP & Kernel Developer</h2>
+            
+            <a href="https://github.com/kevin-825/kevin-resume/releases/download/latest/Kevin_Aimaier_CV.pdf" class="btn">
+                <i class="fa-solid fa-file-pdf"></i> 下载最新 PDF 简历
+            </a>
+
+            <div class="social-links">
+                <a href="https://github.com/kevin-825" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto:kflyn825@outlook.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </header>
+
+        <section id="about">
+            <h3><i class="fa-solid fa-terminal"></i> 个人简介</h3>
+            <p class="summary-text">
+                具有 8 年核心 BSP 与底层固件开发经验的资深嵌入式软件工程师，深谙 RISC-V 与 ARM 多核异构 SoC 体系。具备从硅前 FPGA 软硬协同验证 (Pre-silicon)、硅后点亮 (Bring-up) 到千万级终端量产的全生命周期实战经验。拥有深厚的操作系统内核功底 (Linux/RTOS)，及极度强悍的系统级跨域排错能力（擅长深度运用 GDB/JTAG/QEMU 攻坚跨核死锁、内存踩踏及异常宕机）。精通开发环境的 Docker 容器化构建，并善于运用 Generative AI 赋能底层架构调试与效能提升。
+            </p>
         </section>
 
-        <!-- Dynamic Sections -->
-        <div class="space-y-12">
-            <section>
-                <h2 class="text-2xl font-bold mb-6 border-l-4 border-blue-500 pl-4">Core Research</h2>
-                <div id="research-list" class="grid md:grid-cols-2 gap-4"></div>
-            </section>
+        <section id="skills">
+            <h3><i class="fa-solid fa-microchip"></i> 核心技能架构</h3>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <strong>体系结构与底层机制</strong>
+                    RISC-V, ARMv7/v8-M, AArch64, Xtensa HiFi5 DSP; PLIC/AIA, NVIC/GIC, MMU/PMP.
+                </div>
+                <div class="skill-item">
+                    <strong>SoC 架构与 Bring-up</strong>
+                    BootROM/Bootloader, AHB/AXI/APB Bus Matrix, 时钟/电源树, SFC, SMC, DMA, WDT.
+                </div>
+                <div class="skill-item">
+                    <strong>OS 内核与驱动</strong>
+                    Linux Kernel, FreeRTOS, OpenHarmony LiteOS; VFS, Device Tree (DTS), Kconfig/Buildroot.
+                </div>
+                <div class="skill-item">
+                    <strong>系统级维测基建</strong>
+                    GCC, GDB, OpenOCD, JTAG, QEMU, Docker, Makefile, 跨域死锁追踪, Coredump 解析.
+                </div>
+            </div>
+        </section>
 
-            <section>
-                <h2 class="text-2xl font-bold mb-6 border-l-4 border-green-500 pl-4">Projects</h2>
-                <div id="project-list" class="space-y-4"></div>
-            </section>
-        </div>
-    </main>
-
-    <!-- 1. Load the data first -->
-    <script src="content.js"></script>
-
-    <!-- 2. Execute the logic inside script tags -->
-    <script>
-        // Logic to inject data
-        document.getElementById('user-name').innerText = PROFILE_DATA.name;
-        document.getElementById('user-title').innerText = PROFILE_DATA.title;
-        document.getElementById('resume-btn').href = PROFILE_DATA.resumeLink;
-
-        // Render Research
-        const researchContainer = document.getElementById('research-list');
-        PROFILE_DATA.research.forEach(item => {
-            researchContainer.innerHTML += `
-                <div class="card">
-                    <h3 class="text-blue-400 font-bold mb-1">${item.topic}</h3>
-                    <p class="text-sm text-slate-400">${item.description}</p>
-                </div>`;
-        });
-
-        // Render Projects (Grouped by Category)
-        const projectContainer = document.getElementById('project-list');
-        PROFILE_DATA.projectGroups.forEach(group => {
-            let groupHtml = `
-                <div class="mb-8">
-                    <h3 class="text-lg font-semibold text-slate-300 mb-4 uppercase tracking-wider text-sm">${group.category}</h3>
-                    <div class="grid gap-4">`;
+        <section id="projects">
+            <h3><i class="fa-solid fa-code-branch"></i> 开源与个人基建</h3>
             
-            group.items.forEach(p => {
-                groupHtml += `
-                    <div class="card hover:border-blue-500 transition-colors">
-                        <div class="flex justify-between items-start">
-                            <h4 class="text-lg font-bold italic text-white">${p.name}</h4>
-                            <span class="text-xs font-mono text-slate-500">${p.repo}</span>
-                        </div>
-                        <p class="text-slate-400 text-sm mt-1">${p.desc}</p>
-                    </div>`;
-            });
+            <div class="project-card">
+                <h4><a href="https://github.com/kevin-825/QemuRTOS" target="_blank">QemuRTOS <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.8rem;"></i></a></h4>
+                <p>从零搭建的基于 QEMU 的类 Linux RTOS 开发环境。适配 RISC-V 32/64 virt 与 ARM Cortex-M/AArch64 virt。实现了内核 Bring-up、动态内存管理、UART 驱动，高度容器化并支持一键编译调试，是研究 GIC/PLIC 硬件中断路由的极佳实验平台。</p>
+                <div class="tech-stack">
+                    <span class="tag">C</span>
+                    <span class="tag">RTOS</span>
+                    <span class="tag">RISC-V/ARM</span>
+                    <span class="tag">QEMU</span>
+                </div>
+            </div>
 
-            groupHtml += `</div></div>`;
-            projectContainer.innerHTML += groupHtml;
-        });
-    </script>
+            <div class="project-card">
+                <h4><a href="https://github.com/kevin-825/QemuEmbeddedLinux" target="_blank">QemuEmbeddedLinux <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.8rem;"></i></a></h4>
+                <p>为深度研习 Linux Foundation (LFD420) 高级课程打造的嵌入式 Linux 构建基座。整合 Buildroot、ARM ATF 与 U-boot，支持一键生成 rootfs 并在 QEMU 中无缝拉起。极大简化了内核模块 (Kernel Module) 开发、设备驱动测试及系统级调优的准入门槛。</p>
+                <div class="tech-stack">
+                    <span class="tag">Linux Kernel</span>
+                    <span class="tag">Buildroot</span>
+                    <span class="tag">U-boot</span>
+                    <span class="tag">Device Tree</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h4><a href="https://github.com/kevin-825/EmbeddedDevContainer" target="_blank">EmbeddedDevContainer <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.8rem;"></i></a></h4>
+                <p>彻底消除“在我的机器上能跑”痛点的嵌入式开发环境容器化基建。包含从零编写的多个高鲁棒性 Dockerfile，支持自动化编译 GNU Toolchain (GCC/GDB) 及快速挂载 ARM/RISC-V 交叉编译流水线。</p>
+                <div class="tech-stack">
+                    <span class="tag">Docker</span>
+                    <span class="tag">Bash Shell</span>
+                    <span class="tag">GNU Toolchain</span>
+                    <span class="tag">CI/CD</span>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Kevin Aimaier. Powered by Hardcore Engineering & Generative AI.</p>
+        </footer>
+    </div>
+
 </body>
 </html>
