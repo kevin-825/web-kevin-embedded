@@ -1,7 +1,7 @@
 const PROFILE_DATA = {
     name: "Kevin Flynn",
     title: "Embedded Systems & Kernel Engineer",
-    resumeLink: "https://github.com/kevin-825/kevin-resume/blob/main/rendercv_output/Kevin_Aimaier_CV.pdf", // Remember to keep this a "clean" PDF
+    resumeLink: "https://github.com/kevin-825/kevin-resume/releases/download/latest/Kevin_Aimaier_CV.pdf", // Remember to keep this a "clean" PDF
     
     research: [
         {
